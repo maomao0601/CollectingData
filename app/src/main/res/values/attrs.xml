@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CurrentBarView">
+        <attr name="rectWidth" format="integer"></attr>
+        <attr name="rectHeight" format="integer"></attr>
+        <attr name="percent" format="float"></attr>
+        <attr name="bgColor" format="color"></attr>
+        <attr name="curColor" format="color"></attr>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp56">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp32"
+            android:text="VFA"
+            android:textColor="@color/color_green"
+            android:textSize="@dimen/sp32"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp32"
+            android:text="CURRENT\nFORMULA"
+            android:textColor="@color/color_gray"
+            android:textSize="@dimen/sp20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tv3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp32"
+            android:text="C = (E + 15.09055)/6.31117"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/sp20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:background="@color/color_bar_bg"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <org.lzu.collectingdata.CurrentBarView
+        android:id="@+id/cbv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp32"
+        android:layout_marginTop="@dimen/dp16"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl1"
+        app:percent="1"
+        app:rectHeight="230"
+        app:rectWidth="230" />
+
+    <TextView
+        android:id="@+id/tv_bar1_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BAR FIG"
+        android:textColor="@color/color_gray"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintLeft_toLeftOf="@id/cbv1"
+        app:layout_constraintRight_toRightOf="@id/cbv1"
+        app:layout_constraintTop_toBottomOf="@id/cbv1" />
+
+    <TextView
+        android:id="@+id/tv_bar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp16"
+        android:text="36mmolL¯¹"
+        android:textColor="@color/color_green"
+        android:textSize="@dimen/sp20"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/cbv1"
+        app:layout_constraintLeft_toRightOf="@id/cbv1" />
+
+    <org.lzu.collectingdata.CurrentBarView
+        android:id="@+id/cbv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp32"
+        android:layout_marginTop="@dimen/dp4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_bar1_bottom"
+        app:percent="1"
+        app:rectHeight="230"
+        app:rectWidth="230" />
+
+    <TextView
+        android:id="@+id/tv_bar2_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BAR FIG"
+        android:textColor="@color/color_gray"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintLeft_toLeftOf="@id/cbv2"
+        app:layout_constraintRight_toRightOf="@id/cbv2"
+        app:layout_constraintTop_toBottomOf="@id/cbv2" />
+
+    <TextView
+        android:id="@+id/tv_bar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp16"
+        android:text="117mV"
+        android:textColor="@color/color_green"
+        android:textSize="@dimen/sp20"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/cbv2"
+        app:layout_constraintLeft_toRightOf="@id/cbv2" />
+
+    <TextView
+        android:id="@+id/tv_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CURRENT VALUE"
+        android:textColor="@color/color_gray"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintBottom_toBottomOf="@id/tv_bar2_bottom"
+        app:layout_constraintLeft_toLeftOf="@id/tv_bar2" />
+
+    <TextView
+        android:id="@+id/chart_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="@dimen/dp16"
+        android:text="Realtime Data"
+        android:textColor="@color/color_gray"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintLeft_toRightOf="@id/tv_left"
+        app:layout_constraintTop_toBottomOf="@id/cl1" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/dynamic_chart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="@dimen/dp8"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="@id/tv_bar2"
+        app:layout_constraintLeft_toRightOf="@id/tv_left"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chart_name" />
+
+    <TextView
+        android:id="@+id/chart_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BROKEN LINE GRAPH"
+        android:textColor="@color/color_gray"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintBottom_toBottomOf="@id/tv_left"
+        app:layout_constraintLeft_toLeftOf="@id/dynamic_chart" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp86"
+        android:background="@color/color_black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_bluetooth"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp32"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageView
+                android:id="@+id/iv_bluetooth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp8"
+                android:src="@drawable/ic_bluetooth"
+                app:layout_constraintLeft_toLeftOf="@id/tv_bluetooth"
+                app:layout_constraintRight_toRightOf="@id/tv_bluetooth"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+            <TextView
+                android:id="@+id/tv_bluetooth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp8"
+                android:text="Bluetooth"
+                android:textColor="@color/color_bar_bg"
+                android:textSize="@dimen/sp14"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_wifi"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp48"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/cl_bluetooth"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <org.lzu.collectingdata.WifiStateView
+                android:id="@+id/wsv"
+                android:layout_marginTop="@dimen/dp8"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="@dimen/dp48"
+                android:layout_height="@dimen/dp48" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp8"
+                android:text="Wi-Fi"
+                android:textColor="@color/color_bar_bg"
+                android:textSize="@dimen/sp14"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@id/wsv"
+                app:layout_constraintRight_toRightOf="@id/wsv"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_battery"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp48"
+            android:layout_marginTop="@dimen/dp8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/cl_wifi"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <org.lzu.collectingdata.BatteryView
+                android:id="@+id/bv"
+                android:layout_marginTop="@dimen/dp16"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp8"
+                android:text="Battery"
+                android:textColor="@color/color_bar_bg"
+                android:textSize="@dimen/sp14"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@id/bv"
+                app:layout_constraintRight_toRightOf="@id/bv"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+        </android.support.constraint.ConstraintLayout>
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp8"
+            android:layout_marginLeft="@dimen/dp48"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/cl_battery"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Switch
+                android:id="@+id/s"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp16"
+                app:layout_constraintTop_toTopOf="parent"
+                android:thumb="@drawable/switch_custom_thumb_selector"
+                android:track="@drawable/switch_custom_track_selector"
+                android:checked="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp8"
+                android:text="Mode"
+                android:textColor="@color/color_bar_bg"
+                android:textSize="@dimen/sp14"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@id/s"
+                app:layout_constraintRight_toRightOf="@id/s"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+        </android.support.constraint.ConstraintLayout>
+        <View
+            android:id="@+id/v_line"
+            android:layout_width="@dimen/dp1"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toRightOf="@id/cl_mode"
+            android:layout_marginLeft="@dimen/dp32"
+            android:background="@color/color_gray"
+            />
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/v_line"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+            <TextView
+                android:id="@+id/tv_right1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold|italic"
+                android:text="Volatile Fatty Acid"
+                android:textColor="@color/color_bar_bg"
+                android:textSize="@dimen/sp12"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                />
+            <TextView
+                android:id="@+id/tv_right2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp4"
+                android:text="Concentration Measurement System"
+                android:textColor="@color/color_bar_bg"
+                android:textSize="@dimen/sp10"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_right1"
+                />
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp4"
+                app:layout_constraintTop_toBottomOf="@id/tv_right2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                >
+                <ImageView
+                    android:id="@+id/iv_life"
+                    android:layout_width="@dimen/dp32"
+                    android:layout_height="@dimen/dp32"
+                    android:src="@drawable/ic_life_science"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    />
+                <TextView
+                    android:id="@+id/tv_right3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp4"
+                    android:layout_marginTop="@dimen/dp4"
+                    android:text="School of Life Science\nLanzhou University"
+                    android:textColor="@color/color_bar_bg"
+                    android:textSize="@dimen/sp10"
+                    android:gravity="center"
+                    app:layout_constraintLeft_toRightOf="@id/iv_life"
+                    app:layout_constraintRight_toLeftOf="@id/iv_school"
+                    />
+                <ImageView
+                    android:id="@+id/iv_school"
+                    android:layout_width="@dimen/dp32"
+                    android:layout_height="@dimen/dp32"
+                    android:src="@drawable/ic_school"
+                    app:layout_constraintRight_toRightOf="parent"
+                    />
+            </android.support.constraint.ConstraintLayout>
+        </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

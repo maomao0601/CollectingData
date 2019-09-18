@@ -1,0 +1,20 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light"></style>
+
+    <!--application theme-->
+    <style name="AppTheme" parent="AppBaseTheme"></style>
+
+    <!--activity no titlebar-->
+    <style name="NoTitleTheme" parent="AppTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!--full screen-->
+    <style name="FullScreenTheme" parent="NoTitleTheme">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+</resources>
